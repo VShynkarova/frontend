@@ -1,0 +1,8 @@
+<div class="container text-center">
+    <h3>MY LIST</h3>
+    <app-todo-list [todos]="todos" (toggle)="onToggleTodo($event)" (remove)="onRemoveTodo($event)" (removeAll)="onRemoveAllTodos($event)">
+    </app-todo-list>
+
+    <app-todo-list-add (add)="onAddTodo($event)"></app-todo-list-add>
+
+</div>

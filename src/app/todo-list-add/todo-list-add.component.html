@@ -1,0 +1,18 @@
+<div class="row text-center add-new-btn">
+  <div class="col-sm-12">
+    <div *ngIf="addMode">
+      <form>
+        <div class="form-group">
+          <input name="form" class="new-todo form-control" placeholder="Task" autofocus="" [(ngModel)]="newTodo.title">
+          <input name="form" class="new-todo form-control" placeholder="Details" autofocus="" [(ngModel)]="newTodo.details">
+        </div>
+        <div>
+          <button type="button" class="btn btn-success" (click)="addTodo()">Add</button>
+        </div>
+      </form>
+    </div>
+    <div *ngIf="!addMode">
+      <button type="button" class="btn btn-info" (click)="addMode = !addMode">Add new task</button>
+    </div>
+  </div>
+</div>

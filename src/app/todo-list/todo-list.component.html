@@ -1,0 +1,13 @@
+<div class="row table-active">
+  <div class="col-sm-2 table-header">ID</div>
+  <div class="col-sm-4 table-header">TASK</div>
+  <div class="col-sm-4 table-header">DETAILS</div>
+  <div class="col-sm-2 table-header" class="btn btn-danger" (click)="onRemoveAllTodos()" style="cursor: pointer;">CLEAR ALL</div>
+</div>
+
+<ul class="table-info">
+  <li *ngFor="let todo of todos" class="alternate">
+    <app-todo-list-item [todo]="todo" (toggle)="onToggleTodo($event)" (remove)="onRemoveTodo($event)">
+    </app-todo-list-item>
+  </li>
+</ul>
